@@ -1,0 +1,107 @@
+package it.unibs.ing.fp.codicifiscali;
+
+import java.time.LocalDate;
+
+
+/**
+ * @author Mattia Visini e Thomas Causetti
+ */
+public class Persona {
+
+    private String nome;
+    private String cognome;
+    private char sesso;
+    private LocalDate data_nascita;
+    private Comune luogo_nascita;
+    private CodiceFiscale cod_fiscale;
+
+    /**
+     * Costruttore completo mancante di codice fiscale
+     * @param nome Nome Proprio
+     * @param cognome Cognome Proprio
+     * @param sesso Genere
+     * @param data_nascita data nascita
+     * @param luogo_nascita luogo nascita
+     */
+    public Persona(String nome, String cognome, char sesso, LocalDate data_nascita, Comune luogo_nascita) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.sesso = sesso;
+        this.data_nascita = data_nascita;
+        this.luogo_nascita = luogo_nascita;
+    }
+
+    /**
+     * Costruttore dato solo il codice fiscale
+     * @param cod_fiscale della persona
+     */
+    public Persona(CodiceFiscale cod_fiscale) {
+        this.cod_fiscale = cod_fiscale;
+    }
+
+    /**
+     * Metodo che ritorna il nome della persona
+     * @return Ritorna nome della persona
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * Metodo che ritorna il cognome della persona
+     * @return Ritorna cognome della persona
+     */
+    public String getCognome() {
+        return cognome;
+    }
+
+    /**
+     * Metodo che ritorna il sesso della persona
+     * @return Ritorna il sesso della persona (M maschio oppure F femmina)
+     */
+    public char getSesso() {
+        return sesso;
+    }
+
+    /**
+     * Metodo che ritorna il codice fiscale della persona
+     * @return Ritorna il codice fiscale
+     */
+    public CodiceFiscale getCod_fiscale() {
+        return cod_fiscale;
+    }
+
+    /**
+     * Metodo che ritorna la data di nascita
+     * @return Ritorna data di nascita della persona
+     */
+    public LocalDate getData_nascita() {
+        return data_nascita;
+    }
+
+    /**
+     * Metodo che ritorna un oggetto di tipo comune
+     * @return Ritorna comune di nascita
+     */
+    public Comune getLuogo_nascita() {
+        return luogo_nascita;
+    }
+
+    /**
+     * Metodo permette di settare il C.F. della persona
+     * utilizzando il valore restituito dalla funzione calcoloCodiceFiscale
+     */
+    public void setCodiceFiscale(){
+        this.cod_fiscale = CodiceFiscale.calcoloCodiceFiscale(this);
+    }
+
+    /**
+     * Metodo che ritorna una stringa con tutti i dati della persona
+     */
+    @Override
+    public String toString() {
+        return "Persona --> nome: " + nome + ", cognome: " + cognome + ", sesso: " + sesso
+                + ", data_nascita: " + data_nascita + ", luogo_nascita: " + luogo_nascita
+                + ", cod_fiscale: " + cod_fiscale + "\n";
+    }
+}

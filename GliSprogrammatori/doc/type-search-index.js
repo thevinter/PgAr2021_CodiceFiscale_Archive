@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"gli_sprogrammatori.codicefiscale","l":"App"},{"p":"gli_sprogrammatori.codicefiscale","l":"GestioneCF"},{"p":"gli_sprogrammatori.codicefiscale","l":"LeggiScriviXML"},{"p":"gli_sprogrammatori.codicefiscale","l":"Persona"}]

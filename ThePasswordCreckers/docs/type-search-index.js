@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"it.unibs.fp.codicefiscale","l":"Comune"},{"p":"it.unibs.fp.codicefiscale","l":"Data"},{"p":"it.unibs.fp.codicefiscale","l":"MainLettura"},{"p":"it.unibs.fp.codicefiscale","l":"Persona"},{"p":"it.unibs.fp.Prova","l":"Prova"}];updateSearchResults();

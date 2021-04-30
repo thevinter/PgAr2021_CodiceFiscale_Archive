@@ -1,0 +1,47 @@
+input codiceFiscale
+
+for da 0 a 2
+	if [i] > 'Z' or [i] < 'A'
+		return false
+
+for da 3 a 5
+	if [i] > 'Z' or [i] < 'A'
+		return false
+
+for da 6 a 7
+	if [i] > '9' or [i] < '0'
+		return false
+
+mesi = { 'A', 'B', 'D', 'E', 'H', 'L', 'M', 'P', 'R', 'S', 'T' }
+if [8] != mesi[j]
+	return false
+if [8] == mesi[j]
+	mese = j
+
+giorniPerMese = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }
+
+giorno = [9] * 10 + [10]
+
+if ( giorno < 1 ) || ( giorno > 31 && giorno < 41 ) || ( giorno > 71 )
+	return false
+
+if ( giorno < 41 && giorno > giorniPerMese[mese] ) || ( giorno > 40 && giorni > giorniPerMese[mese] + 40 )
+	return false
+
+for da 9 a 10
+	if [i] > '9' or [i] < '0'
+		return false
+
+in i = 11
+	if [i] > 'Z' or [i] < 'A'
+		return false
+
+for da 12 a 14
+	if [i] > '9' or [i] < '0'
+		return false
+
+in i = 15
+	if [i] > 'Z' or [i] < 'A'
+		return false
+
+return true
